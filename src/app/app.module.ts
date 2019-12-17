@@ -7,15 +7,18 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
-
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
+import {metaReducers} from './state/reducers'
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({},{}),
+    StoreModule.forRoot({},{metaReducers}),
     EffectsModule.forRoot([]),
+    !environment.production ? StoreDevtoolsModule.instrument():[],
     AppRoutingModule,
     SharedModule,
     HomeModule
