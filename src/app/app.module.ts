@@ -9,19 +9,25 @@ import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
-import {metaReducers} from './state/reducers'
+import {metaReducers} from './state/reducers';
+import { ProductModule } from './product/product.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     StoreModule.forRoot({},{metaReducers}),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument():[],
     AppRoutingModule,
     SharedModule,
-    HomeModule
+    HomeModule,
+    ProductModule,
+    BrowserAnimationsModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
