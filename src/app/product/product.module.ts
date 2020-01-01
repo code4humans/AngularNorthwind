@@ -7,7 +7,7 @@ import { ProductListContainerComponent } from './containers/product-list-contain
 import { SharedModule } from '../shared/shared.module';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { reducers } from '../state/reducers';
+import { reducers } from './state/reducers';
 import { ProductEffects } from './state/effects/product.effects';
 import { ProductTableListComponent } from './components/product-table-list/product-table-list.component';
 
