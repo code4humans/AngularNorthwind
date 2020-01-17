@@ -12,28 +12,28 @@ import { map } from 'rxjs/operators';
 })
 export class ProductService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  getProducts(request:GetProduct):Observable<ProductList>{
-    return this.httpClient.post<ProductList>(`${environment.ApiUrl}products/paginated`,request);
+  getProducts(request: GetProduct): Observable<ProductList> {
+    return this.httpClient.post<ProductList>(`${environment.ApiUrl}products/paginated`, request);
   }
 
-  getProductById(id:number):Observable<Product>{
+  getProductById(id: number): Observable<Product> {
     return this.httpClient.get<Product>(`${environment.ApiUrl}products/${id}`)
   }
 
-  updateProduct(product:Product):Observable<Response>{
-    return this.httpClient.put(`${environment.ApiUrl}products`,product)
-    .pipe(
-      map((response:Response)=>response)
-    )
+  updateProduct(product: Product): Observable<Response> {
+    return this.httpClient.put(`${environment.ApiUrl}products`, product)
+      .pipe(
+        map((response: Response) => response)
+      )
   }
 
-  deleteProduct(productId:number):Observable<Response>{
+  deleteProduct(productId: number): Observable<Response> {
     return this.httpClient.delete(`${environment.ApiUrl}products/${productId}`)
-    .pipe(
-      map((response:Response)=>response)
-    );
+      .pipe(
+        map((response: Response) => response)
+      );
   }
 
   addProduct(product: Product): Observable<Response> {
@@ -42,4 +42,5 @@ export class ProductService {
         map((response: Response) => response)
       );
   }
+
 }
