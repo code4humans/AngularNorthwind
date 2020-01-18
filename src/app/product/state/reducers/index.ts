@@ -15,4 +15,5 @@ export const getProductState = createSelector(getProductModuleState, state => st
 export const getProducts = createSelector(getProductState, fromProductReducer.getProducts);
 export const totalRecords = createSelector(getProductState, fromProductReducer.getTotalRecords);
 export const getProduct = createSelector(getProductState,fromProductReducer.getProduct);
+export const getProductBestSellers = createSelector(getProductState,fromProductReducer.getProductBestSellers);
 

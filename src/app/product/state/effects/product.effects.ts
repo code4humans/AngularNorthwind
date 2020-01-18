@@ -63,4 +63,13 @@ export class ProductEffects {
                 })
             ))
     );
+
+    @Effect()
+    getBestSellers$ = this.actions$.pipe(
+        ofType<productActions.GetBestSellers>(productActions.ProductActionTypes.GetBestSellers),
+        switchMap(action => this.productService.getBestSellers()
+            .pipe(
+                map(data => new productActions.GetBestSellersComplete(data))
+            ))
+    );
 }
