@@ -15,7 +15,7 @@ export class OrderListDetail {
         const orderDetail = new OrderListDetail();
         const products: OrderListDetailItem[] = [];
 
-        for (let index = 0; index < data.lenght; index++) {
+        for (let index = 0; index < data.length; index++) {
             const product = new OrderListDetailItem();
             const element = data[index];
             product.id = element.id;
