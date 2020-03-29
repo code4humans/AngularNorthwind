@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularNorthwind';
+  isAuthenticated = true;
+
+  login() {
+
+  }
+  logout() {
+    
+  }
 }
