@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule, MatTabsModule, MatCardModule, 
   MatPaginatorModule,MatIconModule,MatDialogModule,
   MatFormFieldModule,MatInputModule,MatSelectModule,
-  MatDividerModule, MatTooltipModule, MatExpansionModule } from '@angular/material';
+  MatDividerModule, MatTooltipModule, MatExpansionModule,MatListModule,
+  MatDatepickerModule,MatNativeDateModule, MatRadioModule } from '@angular/material';
 
 
 @NgModule({
@@ -20,7 +21,11 @@ import { MatButtonModule, MatTabsModule, MatCardModule,
     MatSelectModule,
     MatDividerModule,
     MatTooltipModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule
   ],
   exports: [
     MatButtonModule,
@@ -34,7 +39,11 @@ import { MatButtonModule, MatTabsModule, MatCardModule,
     MatSelectModule,
     MatDividerModule,
     MatTooltipModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }
